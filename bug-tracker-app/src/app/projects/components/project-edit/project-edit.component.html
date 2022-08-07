@@ -1,1 +1,30 @@
-<p>project-edit works!</p>
+<section class="edit">
+    <p class="route-heading">Add New Project</p>
+    <form [formGroup]="newProjectForm">
+        <div>
+            <p class="label">Name</p>
+            
+            <input type="text" name="projectName" formControlName="newProjectName">
+            
+            <div 
+                class="error" 
+                *ngIf="(newProjectName?.touched || newProjectName?.dirty) && newProjectName?.errors?.['required']"
+            >
+                Project name cannot be empty!
+            </div>
+            <div 
+                class="error" 
+                *ngIf="(newProjectName?.touched || newProjectName?.dirty) && newProjectName?.errors?.['minlength']"
+            >
+                Project name should be a minimum of 10 characters
+            </div>
+            
+        </div>
+        <div>
+            <p class="label">Description</p>
+            <input type="text" name="ProjectDesc" formControlName="newProjectDesc">
+            <!-- <div class="error" *ngIf="(ProjectDescControl.touched || ProjectDescControl.dirty) && ProjectDescControl.invalid">Project description cannot be empty!</div> -->
+        </div>
+        <button (click)="onAddNew()" [disabled]="newProjectForm.invalid" class="addBtn">Add New Project</button>
+    </form>
+</section>

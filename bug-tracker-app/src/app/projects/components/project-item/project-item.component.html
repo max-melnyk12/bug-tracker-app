@@ -1,5 +1,5 @@
-<div class="container">
-    <p class="title" (click)="onEnterProject()">{{project.name}}</p>
+<div class="container" (click)="onEnterProject()">
+    <p class="title">{{project.name}}</p>
     <p class="description">{{project.description}}</p>
     <p class="date">{{project.commencementDate | date:'shortDate'}}</p>
 </div>

@@ -23,7 +23,7 @@ const routes : Routes = [
   {
     path:'new',
     component:ProjectEditComponent
-  }
+  },
 ]
 
 @NgModule({

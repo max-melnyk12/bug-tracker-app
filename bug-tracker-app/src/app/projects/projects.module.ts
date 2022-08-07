@@ -4,6 +4,8 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { ProjectEditComponent } from './components/project-edit/project-edit.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { ProjectsComponent } from './projects.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +17,9 @@ import { ProjectsComponent } from './projects.component';
     ProjectsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     ProjectListComponent,

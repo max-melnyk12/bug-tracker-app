@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProjectOperationsService } from '../../services/project-operations.service';
 
 @Component({
@@ -8,9 +9,13 @@ import { ProjectOperationsService } from '../../services/project-operations.serv
 })
 export class ProjectListComponent implements OnInit {
 
-  constructor(public projectOperations: ProjectOperationsService) { }
+  constructor(public projectOperations: ProjectOperationsService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onAddProject(){
+    this.router.navigate(['new'])
   }
 
 }

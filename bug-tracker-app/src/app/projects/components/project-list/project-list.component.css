@@ -3,6 +3,19 @@
     
 }
 
+.new-btn{
+    background-color: rgba(0, 0, 0, 0.185);
+    color:white;
+    padding:1rem;
+    border-width: 0px;
+    font-weight: bold;
+}
+
+.new-btn:hover{
+    background-color: rgba(0, 0, 0, 0.258);
+    cursor: pointer;
+}
+
 .container{
     
 }
