@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Bug } from "../../models/bug.model";
 import { BugOperationsService } from "../../services/bugOperations.service";
 
@@ -14,7 +15,6 @@ export class BugListComponent{
 
     
     constructor(private bugOperations : BugOperationsService){
-
     }
 
    

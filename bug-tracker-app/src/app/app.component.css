@@ -1,0 +1,16 @@
+.app-container{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0
+}
+
+.app-header{
+    background-color: rgb(46, 40, 64);
+    padding:2rem;
+}
+
+h1{
+    margin:0;
+    color:rgba(255, 255, 255, 0.877)
+}

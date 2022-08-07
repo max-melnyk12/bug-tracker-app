@@ -1,11 +1,10 @@
 <section class="edit">
     <form [formGroup]="newBugForm">
         <div>
-            <label for="">Bug Name :</label>
+            <p class="label">Name</p>
             
             <input type="text" name="bugName" formControlName="newBugName">
             
-            <span> [ {{newBugName?.value?.length}} ] </span>
             <div 
                 class="error" 
                 *ngIf="(newBugName?.touched || newBugName?.dirty) && newBugName?.errors?.['required']"
@@ -31,16 +30,11 @@
        
         </div>
         <div>
-            <label for="">Description :</label>
+            <p class="label">Description</p>
             <input type="text" name="bugDesc" formControlName="newBugDesc">
             <!-- <div class="error" *ngIf="(bugDescControl.touched || bugDescControl.dirty) && bugDescControl.invalid">Bug description cannot be empty!</div> -->
-            
         </div>
-        <button (click)="onAddNew()" [disabled]="newBugForm.invalid" >Add New</button>
-        <div>
-            <div>Values : {{newBugForm.value | json}}</div>
-            <div>Valid : {{newBugForm.valid}}</div>
-        </div>
+        <button (click)="onAddNew()" [disabled]="newBugForm.invalid" class="addBtn">Add New Bug</button>
     </form>
 </section>
 

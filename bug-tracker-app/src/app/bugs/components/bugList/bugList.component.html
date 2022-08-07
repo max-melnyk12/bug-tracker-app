@@ -2,5 +2,5 @@
     <ol>
         <app-bug-item *ngFor="let bug of bugs" [bug]="bug"></app-bug-item>
     </ol>
-    <button (click)="onRemoveClosed()">Remove Closed</button>
+    <button (click)="onRemoveClosed()" class="removeBtn">Remove Closed</button>
 </section>

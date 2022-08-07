@@ -8,23 +8,25 @@ import { BugApiService } from "./bugApi.service";
 export class BugOperationsService{
     
     public bugs : Bug[] = [];
+    public filteredBugs: Bug[] = [];
 
     constructor( private bugApi : BugApiService) {
 
     }
 
-    getAll() {
+    getAll(projectId: number) {
         this.bugApi
             .getAll()
-            .subscribe(bugs => this.bugs = bugs);
+            .subscribe(bugs => this.bugs = bugs.filter(bug=>bug.projectId==projectId));
     }
 
-    createNew(newBugName : string) {
+    createNew(newBugName : string, projectId: number) {
         const newBugData : Bug = {
             id : 0,
             name : newBugName,
             isClosed : false,
-            createdAt : new Date()
+            createdAt : new Date(),
+            projectId : projectId
         }
         this.bugApi
             .save(newBugData)
@@ -56,5 +58,6 @@ export class BugOperationsService{
             .filter(bug => bug.isClosed)
             .forEach(closedBug => this.remove(closedBug))
     }
+
 
 }

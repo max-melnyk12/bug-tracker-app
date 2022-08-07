@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from "@angular/core";
 import { Bug } from "../../models/bug.model";
 import { BugOperationsService } from "../../services/bugOperations.service";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
     selector : 'app-bug-edit',
@@ -9,6 +10,8 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
     styleUrls : ['bugEdit.component.css']
 })
 export class BugEditComponent{
+
+    projectId: number = 0
 
     newBugForm = new FormGroup({
         newBugName : new FormControl('', [
@@ -18,8 +21,10 @@ export class BugEditComponent{
         newBugDesc : new FormControl('')
     })
 
-    constructor(private bugOperations : BugOperationsService){
-        
+    constructor(private bugOperations : BugOperationsService, private route: ActivatedRoute){
+        this.route.params.subscribe(params=>{
+            this.projectId = params['projectId']
+        })
     }
 
     get newBugName(){
@@ -32,7 +37,7 @@ export class BugEditComponent{
 
     onAddNew(){
         if (this.newBugForm.valid){
-            this.bugOperations.createNew(this.newBugForm.value.newBugName || '');
+            this.bugOperations.createNew(this.newBugForm.value.newBugName || '', this.projectId);
         }
     }
 

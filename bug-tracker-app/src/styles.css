@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    margin-left: 50px;
+    background-color: rgb(255, 255, 255);
+    margin:0
+}
+
+p,span,h1,label,button,div{
+    font-family:sans-serif
 }

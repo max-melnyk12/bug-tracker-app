@@ -9,7 +9,7 @@ import { BugOperationsService } from "../../services/bugOperations.service";
 })
 export class BugItemComponent{
     @Input()
-    bug : Bug = { id : 0, name : '', isClosed: false, createdAt : new Date() };
+    bug : Bug = {} as Bug
 
     constructor(private bugOperations : BugOperationsService){
 

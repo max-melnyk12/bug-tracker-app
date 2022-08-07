@@ -4,33 +4,63 @@
       "id": 6,
       "name": "Application not responding",
       "isClosed": false,
-      "createdAt": "2022-02-18T09:16:15.098Z"
+      "createdAt": "2022-02-18T09:16:15.098Z",
+      "projectId": 2
     },
     {
-      "id": 7,
-      "name": "Server communication failure",
+      "id": 9,
+      "name": "new bug hmm lets see",
       "isClosed": false,
-      "createdAt": "2022-02-18T09:53:42.905Z"
+      "createdAt": "2022-08-06T00:37:49.344Z",
+      "projectId": "2"
     },
     {
-      "id": 8,
+      "id": 10,
       "name": "Router is not routing",
       "isClosed": false,
-      "createdAt": "2022-02-18T11:24:02.322Z"
+      "createdAt": "2022-08-06T00:41:54.605Z",
+      "projectId": "3"
+    },
+    {
+      "id": 11,
+      "name": "test test test",
+      "isClosed": false,
+      "createdAt": "2022-08-06T23:34:45.794Z",
+      "projectId": "2"
+    },
+    {
+      "id": 12,
+      "name": "more bug more bug",
+      "isClosed": false,
+      "createdAt": "2022-08-06T23:34:51.865Z",
+      "projectId": "2"
+    },
+    {
+      "id": 13,
+      "name": "more bug more bug 2",
+      "isClosed": false,
+      "createdAt": "2022-08-06T23:34:57.063Z",
+      "projectId": "2"
     }
   ],
   "projects": [
     {
       "id": 1,
-      "name": "Bug Tracker"
+      "name": "Bug Tracker",
+      "description": "A project to track bugs",
+      "commencementDate": "2022-02-18T11:24:02.322Z"
     },
     {
       "id": 2,
-      "name": "Project Management"
+      "name": "Project Management project",
+      "description": "A project to manage projects",
+      "commencementDate": "2022-02-18T11:24:02.322Z"
     },
     {
       "id": 3,
-      "name": "Time Tracker"
+      "name": "Time Tracker",
+      "description": "A project to track time",
+      "commencementDate": "2022-02-18T11:24:02.322Z"
     }
   ]
 }

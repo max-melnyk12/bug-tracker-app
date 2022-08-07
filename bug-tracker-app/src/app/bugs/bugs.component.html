@@ -1,13 +1,16 @@
-<!-- BugStats component -->
-<app-bug-stats [data]="bugOperations.bugs"></app-bug-stats>
+<div class="bugContainer">
 
-<!-- BugSort -->
-<app-bug-sort (sortAttrChange)="sortAttr=$event" (sortOrderChange)="sortDesc=$event"></app-bug-sort>
+    <p class="title">Project bugs</p>
 
+    <!-- BugEdit -->
+    <app-bug-edit></app-bug-edit>
 
-<!-- BugEdit -->
-<app-bug-edit></app-bug-edit>
+    <!-- BugStats component -->
+    <app-bug-stats [data]="bugOperations.bugs"></app-bug-stats>
 
-
-<!-- BugList -->
-<app-bug-list [bugs]="bugOperations.bugs | sort:sortAttr:sortDesc"></app-bug-list>
+    <!-- BugSort -->
+    <app-bug-sort (sortAttrChange)="sortAttr=$event" (sortOrderChange)="sortDesc=$event"></app-bug-sort>
+    
+    <!-- BugList -->
+    <app-bug-list [bugs]="bugOperations.bugs | sort:sortAttr:sortDesc"></app-bug-list>
+</div>

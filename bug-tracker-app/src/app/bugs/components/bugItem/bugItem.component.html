@@ -1,10 +1,13 @@
-<li>
+<li class="container">
     <!-- BugItem -->
-    <span class="bugname" (click)="onToggle(bug)" [ngClass]="{ closed : bug.isClosed }">{{ bug.name |
-        trimText:30 }}</span>
-    <small>[{{bug.id}}]</small>
-    <div class="datetime" [title]="bug.createdAt | date:'dd-MMM-yyyy hh:mm:ss a'">
-        [{{bug.createdAt | elapsed}}]
+    <div>
+        <span class="bugname" (click)="onToggle(bug)" [ngClass]="{ closed : bug.isClosed }">{{ bug.name |
+            trimText:30 }}</span>
+        <small>[{{bug.id}}]</small>
+        <div class="datetime" [title]="bug.createdAt | date:'dd-MMM-yyyy hh:mm:ss a'">
+            {{bug.createdAt | elapsed}}
+        </div>    
     </div>
-    <button (click)="onRemove(bug)">Remove</button>
+    
+    <button (click)="onRemove(bug)" class="removeBtn">X</button>
 </li>

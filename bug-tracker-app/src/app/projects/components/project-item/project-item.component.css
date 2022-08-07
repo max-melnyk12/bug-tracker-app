@@ -1,0 +1,26 @@
+.title:hover{
+    cursor: pointer;
+}
+
+.container{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.288);
+    padding: 1rem;
+}
+
+.container:hover{
+    background-color: rgba(7, 7, 7, 0.107);
+}
+
+.title{
+    font-weight: bold;;
+}
+
+.description{
+}
+
+.date{
+    font-size:0.7rem;
+    opacity: 0.9;
+}

@@ -6,3 +6,16 @@ ol {
     list-style: none;
     -webkit-padding-start: 0px
 }
+
+.removeBtn {
+    background-color: rgb(197, 0, 0);
+    border-width: 0;
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    color:white;
+    font-weight: bold;
+}
+
+.removeBtn:hover {
+    background-color:red
+}

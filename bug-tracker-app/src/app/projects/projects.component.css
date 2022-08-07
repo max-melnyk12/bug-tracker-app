@@ -1,0 +1,16 @@
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:white;
+    margin-top: 0;
+}
+
+.container{
+    background-color:rgb(101, 101, 153);
+    color:rgb(227, 227, 227);
+    padding-left:2rem;
+    padding-top:2rem;
+    padding-right:2rem;
+    margin:0;
+    height: 100%;
+}

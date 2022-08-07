@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectListComponent } from './project-list/project-list.component';
-import { ProjectEditComponent } from './project-edit/project-edit.component';
-import { ProjectItemComponent } from './project-item/project-item.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+import { ProjectEditComponent } from './components/project-edit/project-edit.component';
+import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { ProjectsComponent } from './projects.component';
 
 
@@ -16,6 +16,12 @@ import { ProjectsComponent } from './projects.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ProjectListComponent,
+    ProjectEditComponent,
+    ProjectItemComponent,
+    ProjectsComponent
   ]
 })
 export class ProjectsModule { }
